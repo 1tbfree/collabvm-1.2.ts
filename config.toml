@@ -20,14 +20,14 @@ secretKey = "hunter2"
 
 [auth.guestPermissions]
 chat = true
-turn = false
-callForReset = false
+turn = true
+callForReset = true
 vote = true
 
 [vm]
-qemuArgs = "qemu-system-x86_64"
+qemuArgs = "sudo qemu-system-x86_64 --accel kvm -smp 2 -cpu host -m 8G -M q35 -vga vmware -hda fuck.img"
 vncPort = 5900
-snapshots = true
+snapshots = false
 # Uncomment qmpHost and qmpPort if you're using Windows.
 #qmpHost = "127.0.0.1"
 #qmpPort = "5800"
